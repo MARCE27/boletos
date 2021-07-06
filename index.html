@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Haciendas La Unión</title>     
+
+    <!-- Enlace a biblioteca JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <!-- Enlace a hoja CSS de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    
+    <!-- Enlace a biblioteca JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>   
+
+	<!-- Enlace a leaflet-providers -->  
+    <script src="js/leaflet-providers.js"></script>   
+
+	<!-- Enlace a complemento Leaflet-choropleth -->
+    <script src="js/choropleth.js"></script> 
+
+    <!-- Complemento Leaflet.markercluster -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>
+
+    <!-- Complemento Leaflet.heat -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+
+    <!-- Enlace a kit de Font Awesome -->
+    <script src="https://kit.fontawesome.com/a8c652eb65.js" crossorigin="anonymous"></script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+	 <!-- agregar menu -->
+	<ul class="menu">
+	<li><a href="#">Boletos</a></li>
+	<li><a href="https://marce27.github.io/Region_Union/">La Unión</a></li>
+	<li><a href="https://marce27.github.io/Boletos_PC_B/">P.Claves y Bibliografía</a></li>
+	</ul>   
+	
+	<h1>Los Boletos de Café en la Historia de Costa Rica y la Región de la Unión</h1>  
+	
+	
+	
+	<p>La historia económica de Costa Rica, se encuentra compuesta por distintas etapas que han implicado diferentes productos, sistemas productivos y medios de pago. 
+	Costa Rica fue el primer país centroamericano que incursionó en la industria cafetalera, actividad que impulsó el desarrollo económico y social del país.</p>
+	
+	<p>La producción de café le permitió al país insertarse en el mercado mundial, este cultivo y en específico la especie de café Arábica es introducido a finales del siglo XVIII (ICAFE, s.f.). 
+	Paralelamente, surgió como medio de pago dentro de esta actividad el uso de boletos o fichas de café, debido a la escasez de moneda de curso legal (especialmente la de baja denominación) 
+	(Castro,2013:138).</p>
+	
+	<p>Si bien es cierto, no se conoce el momento específico en que inicia la práctica de pago con boletos o fichas, algunos especialistas señalan que ya desde 1840 circulaban algunos 
+	de estos objetos (Chacón, 2002).</p>
+	
+	<p>A continuación, se presenta una propuesta de base de datos de los boletos de café utilizados entre 1900 a 1940 en las fincas cafetaleras en la región de La Unión en Cartago 
+	(Arce y Córdoba, 2021).</p>
+	    
+    <!-- Elemento div para contener el mapa Leaflet -->
+    <div id="mapid"></div>
+
+    <!-- Código JavaScript para generar y manejar el mapa Leaflet -->
+    <script src="js/scripts.js"></script>	
+
+	<!-- Controles para la opacidad  -->
+    <h5>Opacidad: <span id="span-opacity">0.5</span></h5>
+    <input type='range' id='sld-opacity' min='0' max='1' step='0.1' value='0.5' onchange='updateOpacityradia();'>	
+	
+</body>
+</html>
